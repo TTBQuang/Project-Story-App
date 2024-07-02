@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import 'package:project_login/ViewModels/ContentStoryAudioViewModel.dart';
 
 class ChooseChapterAudioBottomSheet extends StatefulWidget {
@@ -29,6 +30,9 @@ class _ChooseChapterAudioBottomSheetState extends State<ChooseChapterAudioBottom
     for (int i = 1; i <= contentStoryAudioViewModel.chapterPagination.maxPage; i++) {
       chapterPaginationList.add(i.toString());
     }
+    Logger logger = Logger();
+    logger.i(chapterPaginationList);
+
     dropdownValue =
         contentStoryAudioViewModel.chapterPagination.currentPage.toString();
     currentPageNumber = contentStoryAudioViewModel.chapterPagination.currentPage;

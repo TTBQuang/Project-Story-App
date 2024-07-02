@@ -79,7 +79,7 @@ class ContentStoryAudioBottomAppBar extends StatelessWidget {
               }
             }/* else if (index == 1) {
               // show choose chapter bottom sheet
-              await showDialog<void>(
+             showModalBottomSheet(
                 context: context,
                 builder: (BuildContext context) => ChooseChapterAudioBottomSheet(
                     contentStoryAudioViewModel, onChooseChapter),
